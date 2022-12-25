@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_for_show"
+    tools:context=".AdminShow">
+
+
+    <ListView
+        android:id="@+id/ls_admin"
+        android:layout_width="371dp"
+        android:layout_height="602dp"
+        android:layout_marginTop="72dp"
+        android:divider="@color/purple_700"
+        android:dividerHeight="2sp"
+        android:listSelector="#40FFFFFF"
+        android:scrollbarSize="10sp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:soundEffectsEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/back_for_show"
+    tools:context=".ShowContacts">
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/purple_700"
+        android:drawableLeft="@drawable/ic_baseline_person_add_24"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="61dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/purple_700"
+        android:drawableRight="@drawable/ic_baseline_delete_24"
+        android:paddingEnd="18dp"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add" />
+
+    <Button
+        android:id="@+id/modify"
+        android:layout_width="59dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/purple_700"
+        android:drawableLeft="@drawable/ic_baseline_change_circle_24"
+        android:paddingEnd="18dp"
+        android:text="@string/m"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtadd"
+        android:layout_width="56dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:text="@string/addtx"
+        android:textColor="@color/purple_700"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/delete" />
+
+    <TextView
+        android:id="@+id/txtdelete"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:text="@string/deletetx"
+        android:textColor="@color/purple_700"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/modify" />
+
+    <TextView
+        android:id="@+id/txtmodify"
+        android:layout_width="56dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:text="@string/modifytx"
+        android:textColor="@color/purple_700"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="373dp"
+        android:layout_height="480dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/ls"
+            android:layout_width="wrap_content"
+            android:layout_height="510dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:divider="@color/purple_700"
+            android:dividerHeight="2sp"
+            android:listSelector="#40FFFFFF"
+            android:scrollbarSize="10sp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:soundEffectsEnabled="true"
+            tools:listitem="@layout/item" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/call"
+        android:layout_width="59dp"
+        android:layout_height="64dp"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/purple_700"
+        android:drawableLeft="@drawable/ic_baseline_call_24"
+        android:paddingEnd="18dp"
+        android:text="@string/m"
+        app:layout_constraintBottom_toTopOf="@+id/calltxt"
+        app:layout_constraintStart_toEndOf="@+id/add" />
+
+    <TextView
+        android:id="@+id/calltxt"
+        android:layout_width="56dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:text="@string/call"
+        android:textColor="@color/purple_700"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtadd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
