@@ -12,7 +12,7 @@ Sinon il existe un code QR sous format PNG avec les fichiers déposés.
 
 Les fichiers PHP sont aussi disponible dans un dossier "**PHP Files**"
 
-Le source code est tout disponible au fichier "**min_projet.zip**" ou le dossier **final**
+Le source code est tout disponible au fichier "**min_projet.zip**" ou le dossier **final_app**
 
 N.B:
 
